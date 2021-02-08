@@ -1,0 +1,3 @@
+.boxBackground {
+    transition: background-color ease-in 500ms;
+}

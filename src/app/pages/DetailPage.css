@@ -1,0 +1,135 @@
+.link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.detailPageContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+}
+
+.detailsContainerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+img {
+    object-fit: contain;
+    width: 90%;
+}
+
+.detailImgContainer {
+    flex: 50%;
+    max-width: 100%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    align-self: flex-start;
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 90%;
+}
+
+.leftContainer {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detailName {
+    font-size: 16px;
+}
+
+.detailValue {
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.borderCountriesText {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.borderCountriesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.borderCountriesCard {
+    border-radius: 5px;
+    margin-right: 10px;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.detailBorderCountries {
+    margin-right: 20px;
+}
+
+.ttlContainer {
+    width: 90%;
+}
+
+@media only screen and (max-width: 900px) {
+    .detailsContainerWrapper {
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+    .leftContainer {
+        flex: 100%;
+        width: 90%;
+        align-items: center;
+    }
+    .detailImgContainer {
+        flex: 100%;
+        width: 90%;
+    }
+    .borderCountriesContainer {
+        width: 90%;
+    }
+    .detailsContainerWrapper {
+        padding-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .detailsContainer {
+        height: auto;
+    }
+}

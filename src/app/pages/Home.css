@@ -1,0 +1,37 @@
+.homeContainer {
+    width: 100%;
+    padding-top: 200px;
+}
+
+.homeContainerWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.homeBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.homeBody>* {
+    margin: 40px;
+    height: auto;
+}
+
+.searchBarFilterPanel {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .homeContainer {
+        padding-top: 300px;
+    }
+}

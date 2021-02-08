@@ -1,0 +1,52 @@
+.cardImage {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.countryCard {
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    min-height: 400px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.15);
+}
+
+.cardBody {
+    padding-left: 20px;
+}
+
+.cardBodyRow {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.cardBodyRowTitle {
+    font-size: 16px;
+}
+
+.cardBodyRowValue {
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.cardTitle {
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 450px) {
+    .countryCard {
+        max-width: 100%;
+    }
+    .cardImage {
+        width: 100%;
+    }
+}
