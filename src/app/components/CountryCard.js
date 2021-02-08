@@ -1,16 +1,32 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Text from './themed/Text';
 import './CountryCard.css'
 import BoxElement from './themed/BoxElement';
 import NumberFormat from 'react-number-format';
+import { animated, useSpring } from 'react-spring';
+
+const AnimatedBoxElement = animated(BoxElement)
 
 export default function CountryCard({
     imgUrl, title, population, region, capital, ...props
 }) {
+    const [mouseOver, setMouseOver] = useState(false)
+    const animatedProps = useSpring({
+        boxShadow: mouseOver ? '0px 20px 30px 3px rgba(0, 0, 0, 0.30)' : '0px 0px 20px 3px rgba(0, 0, 0, 0.15)',
+        zoom: mouseOver ? '105%' : '100%',
+    })
+
+    function handleOnMouseOver() {
+        setMouseOver(true)
+    }
+
+    function handleOnMouseOut() {
+        setMouseOver(false)
+    }
 
     return (
-        <div   {...props}  >
-            <BoxElement className="countryCard">
+        <animated.div onMouseOver={handleOnMouseOver} onMouseOut={handleOnMouseOut}   {...props} style={{ ...props.style }}  >
+            <AnimatedBoxElement style={animatedProps} className="countryCard">
                 <div className="cardImageWrapper">
                     <img loading="eager"
                         className="cardImage" src={imgUrl}></img>
@@ -30,7 +46,7 @@ export default function CountryCard({
                         <Text className="cardBodyRowValue">{capital}</Text>
                     </div>
                 </div>
-            </BoxElement>
-        </div>
+            </AnimatedBoxElement>
+        </animated.div>
     )
 }

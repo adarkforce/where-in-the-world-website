@@ -11,4 +11,9 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    font-weight: 600;
+}
+
+.darkModeButtonText {
+    font-weight: 600;
 }

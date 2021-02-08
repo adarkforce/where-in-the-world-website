@@ -1,6 +1,6 @@
 .cardImage {
     width: 300px;
-    height: 200px;
+    height: 170px;
     object-fit: cover;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -8,11 +8,11 @@
 
 .countryCard {
     max-width: 300px;
-    height: auto;
+    min-height: 350px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    min-height: 400px;
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.15);
@@ -20,19 +20,30 @@
 
 .cardBody {
     padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 40px;
 }
 
 .cardBodyRow {
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    height: auto;
 }
 
 .cardBodyRowTitle {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
     font-size: 16px;
 }
 
 .cardBodyRowValue {
+    margin: 0;
+    padding-bottom: 5px;
     font-size: 14px;
     font-weight: 300;
     margin-left: 10px;

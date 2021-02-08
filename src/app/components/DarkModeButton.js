@@ -28,7 +28,7 @@ export default function DarkModeButton() {
                     transform: 'rotateZ(-20deg)'
                 }} icon={darkMode ? faMoonSolid : faMoon}></AnimatedFAIcon>
             </Text>
-            <Text fontSize="16px">Dark Mode</Text>
+            <Text className="darkModeButtonText" fontSize="16px">Dark Mode</Text>
         </BoxElement>
 
 
