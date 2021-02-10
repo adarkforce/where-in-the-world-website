@@ -13,7 +13,7 @@ export default function CountryCard({
     const [mouseOver, setMouseOver] = useState(false)
     const animatedProps = useSpring({
         boxShadow: mouseOver ? '0px 20px 30px 3px rgba(0, 0, 0, 0.30)' : '0px 0px 20px 3px rgba(0, 0, 0, 0.15)',
-        zoom: mouseOver ? '105%' : '100%',
+        marginTop: mouseOver ? '-20px' : '0px'
     })
 
     function handleOnMouseOver() {
@@ -25,8 +25,8 @@ export default function CountryCard({
     }
 
     return (
-        <animated.div onMouseOver={handleOnMouseOver} onMouseOut={handleOnMouseOut}   {...props} style={{ ...props.style }}  >
-            <AnimatedBoxElement style={animatedProps} className="countryCard">
+        <animated.div onMouseOver={handleOnMouseOver} onMouseOut={handleOnMouseOut}   {...props} style={{ ...props.style, position: 'static', marginTop: animatedProps.marginTop }}  >
+            <AnimatedBoxElement style={{ boxShadow: animatedProps.boxShadow }} className="countryCard">
                 <div className="cardImageWrapper">
                     <img loading="eager"
                         className="cardImage" src={imgUrl}></img>

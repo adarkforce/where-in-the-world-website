@@ -64,9 +64,7 @@ export default function Home() {
             <div className="homeContainer">
 
                 {countriesArr && current && <InfiniteScroll
-                    style={{
-                        overflow: 'visible'
-                    }}
+
                     dataLength={current.length}
                     hasChildren={(current.length > 0)}
                     endMessage={(current.length === 0) &&
